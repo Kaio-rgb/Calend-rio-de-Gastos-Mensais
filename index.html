@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario De Gastos Mensais</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container"> 
+        <h1>Calendario de Gastos Mensais</h1>
+
+        <div class="Cadastro De Gastos">
+            <h2>Cadastro novo Gasto</h2>
+            <form id="form-cadastro">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" required>
+
+                <label for="valor">Valor (R$):</label>
+                <input type="number" id="valor" step="0.01" required>
+
+                <label for="data">Data :</label>
+                <input type="data" id="data" required>
+
+                <button type="submit">Adicionar Gasto</button>
+            </form>
+        </div>
+
+        <div class="Lista Gastos">
+            <h2>Lista de Gastos</h2>
+            <ul id="lista de gastos"></ul>
+
+            <div class="total gastos">
+                <strong>Total: R$ <span id="total">0.00</span> </strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
