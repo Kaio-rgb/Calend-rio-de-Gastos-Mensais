@@ -8,8 +8,13 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #bb9e9e;
+    background-color: #eee7e7;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 h2 {
+    text-align: center;
+    color: #58b733;
 }
