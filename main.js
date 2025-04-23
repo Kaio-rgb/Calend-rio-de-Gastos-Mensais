@@ -127,3 +127,10 @@ function salvarEdicaoGasto() {
         document.querySelector('.cadastro-gastos h2').textContent = 'Cadastrar Novo Gasto';
         document.querySelector('.cadastro-gastos button[type="submit"]').textContent = 'Adicionar Gasto';
     } 
+
+    else {
+        alert('Por favor, preencha todos os campos corretamente.');
+    }
+}
+
+// Inicialização (se houver dados salvos localmente, você pode carregar aqui)
