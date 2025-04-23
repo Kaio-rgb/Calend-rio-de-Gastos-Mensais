@@ -54,3 +54,13 @@ function atualizarListaDeGastos() {
     adicionarEventListenersAcoes();
 }
 
+function atualizarTotal() {
+    const total = gastos.reduce((soma, gasto) => soma + gasto.valor, 0);
+    totalElement.textContent = total.toFixed(2);
+}
+
+function limparFormulario() {
+    document.getElementById('descricao').value = '';
+    document.getElementById('valor').value = '';
+    document.getElementById('data').value = '';
+}
