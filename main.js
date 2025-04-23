@@ -85,3 +85,21 @@ function adicionarEventListenersAcoes() {
         });
     });
 }
+
+function removerGasto(id) {
+    gastos = gastos.filter(gasto => gasto.id !== id);
+    atualizarListaDeGastos();
+    atualizarTotal();
+}
+
+function carregarGastoParaEdicao(id) {
+    const gastoParaEditar = gastos.find(gasto => gasto.id === id);
+    if (gastoParaEditar) {
+        document.getElementById('descricao').value = gastoParaEditar.descricao;
+        document.getElementById('valor').value = gastoParaEditar.valor;
+        document.getElementById('data').value = gastoParaEditar.data;
+        idEdicao = id;
+        document.querySelector('.cadastro-gastos h2').textContent = 'Editar Gasto';
+        document.querySelector('.cadastro-gastos button[type="submit"]').textContent = 'Salvar Edição';
+    }
+}
