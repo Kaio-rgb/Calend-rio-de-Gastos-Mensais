@@ -103,3 +103,27 @@ function carregarGastoParaEdicao(id) {
         document.querySelector('.cadastro-gastos button[type="submit"]').textContent = 'Salvar Edição';
     }
 }
+
+function salvarEdicaoGasto() {
+    const descricaoInput = document.getElementById('descricao');
+    const valorInput = document.getElementById('valor');
+    const dataInput = document.getElementById('data');
+
+    const descricao = descricaoInput.value.trim();
+    const valor = parseFloat(valorInput.value);
+    const data = dataInput.value;
+
+    if (descricao && !isNaN(valor) && data) {
+        gastos = gastos.map(gasto => {
+            if (gasto.id === idEdicao) {
+                return { ...gasto, descricao, valor, data };
+            }
+            return gasto;
+        });
+        atualizarListaDeGastos();
+        atualizarTotal();
+        limparFormulario();
+        idEdicao = null;
+        document.querySelector('.cadastro-gastos h2').textContent = 'Cadastrar Novo Gasto';
+        document.querySelector('.cadastro-gastos button[type="submit"]').textContent = 'Adicionar Gasto';
+    } 
