@@ -34,3 +34,23 @@ function adicionarGasto() {
         alert('Por favor, preencha todos os campos corretamente.');
     }
 }
+
+function atualizarListaDeGastos() {
+    listaDeGastos.innerHTML = '';
+    gastos.forEach(gasto => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <span>${gasto.descricao} - R$ ${gasto.valor.toFixed(2)} (${formatarData(gasto.data)})</span>
+            <div class="acoes">
+                <button class="editar-btn" data-id="${gasto.id}">Editar</button>
+                <button class="remover-btn" data-id="${gasto.id}">Remover</button>
+            </div>
+        `;
+        if (gasto.valor > 100) {
+            listItem.classList.add('alto-valor');
+        }
+        listaDeGastos.appendChild(listItem);
+    });
+    adicionarEventListenersAcoes();
+}
+
