@@ -64,3 +64,24 @@ function limparFormulario() {
     document.getElementById('valor').value = '';
     document.getElementById('data').value = '';
 }
+
+function formatarData(data) {
+    const partes = data.split('-');
+    return `${partes[2]}/${partes[1]}/${partes[0]}`;
+}
+
+function adicionarEventListenersAcoes() {
+    document.querySelectorAll('.remover-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const idRemover = parseInt(this.dataset.id);
+            removerGasto(idRemover);
+        });
+    });
+
+    document.querySelectorAll('.editar-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const idEditar = parseInt(this.dataset.id);
+            carregarGastoParaEdicao(idEditar);
+        });
+    });
+}
