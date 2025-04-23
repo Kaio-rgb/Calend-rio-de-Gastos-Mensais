@@ -52,3 +52,12 @@ button {
     front-size: 1em;
 }
 
+button:hover {
+    background-color: #4cae4c;
+}
+
+.lista-gastos ul {
+    list-style: none;
+    padding: 0;
+}
+
