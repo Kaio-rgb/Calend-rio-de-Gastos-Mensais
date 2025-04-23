@@ -6,3 +6,12 @@ let idEdicao = null;
 
 // Variável para rastrear o ID do gasto em edição
 
+formCadastro.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (idEdicao !== null) {
+        salvarEdicaoGasto();
+    } else {
+        adicionarGasto();
+    }
+});
+
