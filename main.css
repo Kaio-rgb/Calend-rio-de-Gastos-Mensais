@@ -81,3 +81,11 @@ button:hover {
 .lista-gastos .acoes button:hover {
     background-color: #c9302c;
 }
+
+.lista-gastos .editar-btn {
+    background-color: #f0ad4e;
+}
+
+.lista-gastos .editar-btn:hover {
+    background-color: #eea236;
+}
