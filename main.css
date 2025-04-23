@@ -69,5 +69,15 @@ button:hover {
     border-bottom: 1px solid #e01e1e;
 }
 
+.lista-gastos li:last-child {
+    border-bottom: none;
+}
 
+.lista-gastos .acoes button {
+    background-color: #d9534f;
+    margin-left: 5px;
+}
 
+.lista-gastos .acoes button:hover {
+    background-color: #c9302c;
+}
