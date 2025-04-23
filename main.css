@@ -61,3 +61,13 @@ button:hover {
     padding: 0;
 }
 
+.lista-gastos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e01e1e;
+}
+
+
+
